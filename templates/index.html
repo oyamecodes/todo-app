@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/todo.css') }}">
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="todo">
+        <div class="class-heading">
+            <h1>List_Todo</h1>
+            <img src="{{ url_for('static', filename='images/to-do-list.png') }}" alt="todoapp">
+        </div>
+        <div class="headers">
+            <h2 id="personal" class="active">personal</h2>
+            <h2 id="professional">professional</h2>
+        </div>
+        <div>
+            <h1>Welcome, {{ name }}</h1>
+        </div>
+        <div class="row">
+            <input type="text" id="input-type" placeholder="what do you need to do">
+            <button onclick="addTask()">Add</button>
+        </div>
+        <div id="task-container">
+            <ul id="list-container"></ul>
+            <p id="no-tasks-message" style="display: none;">There are no tasks. Please create a task.</p>
+        </div>
+        <div class="clear-all-container">
+            <img src="{{ url_for('static', filename='images/delete.png') }}" alt="Clear All" class="clear-all-icon">
+            <span class="clear-all-text">Clear All</span>
+        </div>
+    </div>
+</div>
+{% block script %}<script src="{{ url_for('static', filename='js/script.js') }}"></script>{% endblock %}
+{% endblock %}

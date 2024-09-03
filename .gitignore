@@ -1,0 +1,24 @@
+# Virtual environment
+env/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Database
+*.db
+
+# Log files
+*.log
+
+# Environment variables
+.env
+
+# IDE specific files
+.vscode/
+.idea/
+
+# Do not ignore these:
+!migrations/
+!requirements.txt
+!wireframes/
